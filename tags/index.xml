@@ -10,6 +10,16 @@
     
     
     <item>
+      <title>WSL BASH Customization</title>
+      <link>https://jobinjosem.github.io/2022/03/wsl-customization/</link>
+      <pubDate>Tue, 01 Mar 2022 20:36:49 +0100</pubDate>
+      
+      <guid>https://jobinjosem.github.io/2022/03/wsl-customization/</guid>
+      <description>Customize your Windows Terminal BASH in WSL2 There are thousands of articles available in the internet about how you can customize your bash prompt in different ways. In this post, I will explain how to personalize your widows terminal bash prompt in WSL2 from a Devops engineer viewpoint.
+Often times we have to interact with Cloud resources in Azure and Kubernetes using different az cli and kubectl. How about showing the cluster you are connected, the namespace you are in, the current azure subscription and the git repository you are working in and it&amp;rsquo;s current branch all in one place, awesome right?</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>https://jobinjosem.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
