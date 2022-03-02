@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+        Customize your Windows Terminal BASH in WSL2 - A Devops Engineering Blog
+      </title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    
+    <meta name="theme-color" content="#000000" />
+    
+    <meta http-equiv="window-target" content="_top" />
+    
+    
+    <meta name="description" content="Customize your Windows Terminal BASH in WSL2 There are thousands of articles available in the internet about how you can customize your bash prompt in different ways. In this post, I will explain how to personalize your widows terminal bash prompt in WSL2 from a Devops engineer viewpoint.
+Often times we have to interact with Cloud resources in Azure and Kubernetes using different az cli and kubectl. How about showing the cluster you are connected, the namespace you are in, the current azure subscription and the git repository you are working in and it&amp;rsquo;s current branch all in one place, awesome right?" />
+    <meta name="generator" content="Hugo 0.92.2 with theme pure" />
+    <title>Customize your Windows Terminal BASH in WSL2 - A Devops Engineering Blog</title>
+    
+    
+    <link rel="stylesheet" href="https://jobinjosem.github.io/css/style.min.d60a90e4e9b2c52d331f70e6c6c79de8fffe0d6a37e8a782868c3274bd558420.css">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+    <meta property="og:title" content="Customize your Windows Terminal BASH in WSL2" />
+<meta property="og:description" content="Customize your Windows Terminal BASH in WSL2 There are thousands of articles available in the internet about how you can customize your bash prompt in different ways. In this post, I will explain how to personalize your widows terminal bash prompt in WSL2 from a Devops engineer viewpoint.
+Often times we have to interact with Cloud resources in Azure and Kubernetes using different az cli and kubectl. How about showing the cluster you are connected, the namespace you are in, the current azure subscription and the git repository you are working in and it&rsquo;s current branch all in one place, awesome right?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jobinjosem.github.io/2021/08/wsl-customization/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-08-01T20:36:49+01:00" />
+<meta property="article:modified_time" content="2021-08-01T20:36:49+01:00" />
+
+<meta itemprop="name" content="Customize your Windows Terminal BASH in WSL2">
+<meta itemprop="description" content="Customize your Windows Terminal BASH in WSL2 There are thousands of articles available in the internet about how you can customize your bash prompt in different ways. In this post, I will explain how to personalize your widows terminal bash prompt in WSL2 from a Devops engineer viewpoint.
+Often times we have to interact with Cloud resources in Azure and Kubernetes using different az cli and kubectl. How about showing the cluster you are connected, the namespace you are in, the current azure subscription and the git repository you are working in and it&rsquo;s current branch all in one place, awesome right?"><meta itemprop="datePublished" content="2021-08-01T20:36:49+01:00" />
+<meta itemprop="dateModified" content="2021-08-01T20:36:49+01:00" />
+<meta itemprop="wordCount" content="304">
+<meta itemprop="keywords" content="wsl,kubernetes,terminal," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Customize your Windows Terminal BASH in WSL2"/>
+<meta name="twitter:description" content="Customize your Windows Terminal BASH in WSL2 There are thousands of articles available in the internet about how you can customize your bash prompt in different ways. In this post, I will explain how to personalize your widows terminal bash prompt in WSL2 from a Devops engineer viewpoint.
+Often times we have to interact with Cloud resources in Azure and Kubernetes using different az cli and kubectl. How about showing the cluster you are connected, the namespace you are in, the current azure subscription and the git repository you are working in and it&rsquo;s current branch all in one place, awesome right?"/>
+
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  
+  
+
+  <body class="main-center theme-purple" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://github.com/jobinjosem" target="_blank">
+            <img class="img-circle img-rotate" src="https://jobinjosem.github.io/avatar.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">Jobin Jose</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">Devops Engineer</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>Oslo, Norway</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">Home</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/posts/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Archives</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">Categories</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">Tags</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-repository">
+                <a href="/repository/">
+                    <i class="icon icon-project"></i>
+                  <span class="menu-title">Repository</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/about/">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">About</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://jobinjosem.github.io/categories/wsl/" class="category-list-link">wsl</a><span class="category-list-count">1</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://jobinjosem.github.io/tags/index/" class="tag-list-link">index</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://jobinjosem.github.io/tags/kubernetes/" class="tag-list-link">kubernetes</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://jobinjosem.github.io/tags/terminal/" class="tag-list-link">terminal</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://jobinjosem.github.io/tags/wsl/" class="tag-list-link">wsl</a><span
+                    class="tag-list-count">1</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+<div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://jobinjosem.github.io/2021/08/wsl-customization/" class="title">Customize your Windows Terminal BASH in WSL2</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2021-08-01 20:36:49 &#43;0100 &#43;0100" itemprop="datePublished">2021-08-01</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2021/08/wsl-customization/"
+    >Customize your Windows Terminal BASH in WSL2</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://jobinjosem.github.io/2021/08/wsl-customization/" class="article-date">
+  <time datetime="2021-08-01 20:36:49 &#43;0100 &#43;0100" itemprop="datePublished">2021-08-01</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/wsl/"> wsl </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/wsl/"> wsl </a>
+    <a class="article-tag-link" href="/tags/kubernetes/"> kubernetes </a>
+    <a class="article-tag-link" href="/tags/terminal/"> terminal </a>
+  </span>
+
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 304 words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 2 minutes </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h1 id="customize-your-windows-terminal-bash-in-wsl2">Customize your Windows Terminal BASH in WSL2</h1>
+<p>There are thousands of articles available in the internet about how you can customize your bash prompt in different ways. In this post, I will explain how to personalize your widows terminal bash prompt in WSL2 from a Devops engineer viewpoint.</p>
+<p>Often times we have to interact with Cloud resources in Azure and Kubernetes using different <code>az cli</code> and <code>kubectl</code>. How about showing the cluster you are connected, the namespace you are in, the current azure subscription and the git repository you are working in and it&rsquo;s current branch all in one place, awesome right? Let me explain how I did this.</p>
+<p>There are some prerequisites you have to install to get this working.</p>
+<ol>
+<li>
+<h5 id="install-kubectl--git">Install kubectl + git</h5>
+</li>
+</ol>
+<pre><code>curl -LO &quot;https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl&quot;
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+sudo apt-get install git
+</code></pre>
+<ol start="2">
+<li>
+<h5 id="copy-kube-ps1sh-from-kube-ps1httpsgithubcomjonmoscokube-ps1">Copy <code>kube-ps1.sh</code> from <a href="https://github.com/jonmosco/kube-ps1">kube-ps1</a></h5>
+</li>
+</ol>
+<pre><code>git clone https://github.com/jonmosco/kube-ps1
+mv kube-ps1/kube-ps1.sh ~
+rm -rf kube-ps1
+</code></pre>
+<ol start="3">
+<li>
+<h5 id="obtain-kubectx--kubens-from-kubectxhttpsgithubcomahmetbkubectx">Obtain kubectx + kubens from <a href="https://github.com/ahmetb/kubectx">kubectx</a></h5>
+</li>
+</ol>
+<pre><code>sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
+sudo mv /opt/kubectx/kubectx /usr/local/bin/kubectx
+sudo mv /opt/kubectx/kubens /usr/local/bin/kubens
+rm -rf /opt/kubectx
+</code></pre>
+<ol start="4">
+<li>
+<h5 id="install-fzf">Install fzf</h5>
+</li>
+</ol>
+<pre><code>git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+</code></pre>
+<ol start="5">
+<li>
+<h5 id="install-jq">Install jq</h5>
+</li>
+</ol>
+<pre><code>sudo apt update
+sudo apt install -y jq
+</code></pre>
+<ol start="6">
+<li>
+<h5 id="edit-your-bashrc-file">Edit your [~/.bashrc] file</h5>
+</li>
+</ol>
+<p>Add the below lines to your .bashrc file.</p>
+<pre><code>source ~/kube-ps1.sh
+alias n='kubens'
+alias x='kubectx'
+PS1='$(kube_ps1)'&quot;\[\e[33m\] \D{%H:%M} \[\033[95m\][\$(az account show 2&gt;/dev/null | jq -r .name)] \[\e[32m\]\W \[\033[33m\][\$(git symbolic-ref --short HEAD 2&gt;/dev/null)] \[\e[00m\]$ &quot;
+</code></pre>
+<ol start="7">
+<li>
+<h5 id="relaunch-your-interactive-shell-instane">Relaunch your interactive shell instane</h5>
+</li>
+</ol>
+<pre><code>source ~/.bashrc
+</code></pre>
+<p>You can easily change your kubernetes cluster by typing <code>x</code> and pressing <code>enter</code>. A list of available Kubernetes clusters in your <code>kubecfg</code> will be shown.</p>
+<p>Similarly pressing <code>n</code> will list all the namespaces in the selected cluster and you can select from the list.</p>
+<p>You are done. The terminal must look like this!!</p>
+<p><img src="/images/wsl-bash-customization.png" alt="demo"></p>
+<p>Thank You for reading. Please do share your feedback.😊</p>
+
+    </div>
+    <div class="article-footer">
+
+    </div>
+  </article>
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <strong>
+            <ul class="pager pull-left">
+                <li class="prev">
+                    <a href="https://jobinjosem.github.io/about/" title="About"><i class="icon icon-angle-left"
+                            aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+                </li>
+                
+                <li class="toggle-toc">
+                    <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                        title="" role="button">
+                        <span>[&nbsp;</span><span>Catalogue</span>
+                        <i class="text-collapsed icon icon-anchor"></i>
+                        <i class="text-in icon icon-close"></i>
+                        <span>]</span>
+                    </a>
+                </li>
+            </ul>
+        </strong>
+        <div class="bar-right">
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjobinjosem.github.io%2f2021%2f08%2fwsl-customization%2f" target="_blank" rel="noopener" aria-label="">
+    <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.38 0 0 5.38 0 12s5.38 12 12 12 12-5.38 12-12S18.62 0 12 0zm3.6 11.5h-2.1v7h-3v-7h-2v-2h2V8.34c0-1.1.35-2.82 2.65-2.82h2.35v2.3h-1.4c-.25 0-.6.13-.6.66V9.5h2.34l-.24 2z"/></svg>
+      </div>
+    </div>
+  </a>
+  
+  
+  <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Customize%20your%20Windows%20Terminal%20BASH%20in%20WSL2&amp;url=https%3a%2f%2fjobinjosem.github.io%2f2021%2f08%2fwsl-customization%2f" target="_blank" rel="noopener" aria-label="">
+    <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.38 0 0 5.38 0 12s5.38 12 12 12 12-5.38 12-12S18.62 0 12 0zm5.26 9.38v.34c0 3.48-2.64 7.5-7.48 7.5-1.48 0-2.87-.44-4.03-1.2 1.37.17 2.77-.2 3.9-1.08-1.16-.02-2.13-.78-2.46-1.83.38.1.8.07 1.17-.03-1.2-.24-2.1-1.3-2.1-2.58v-.05c.35.2.75.32 1.18.33-.7-.47-1.17-1.28-1.17-2.2 0-.47.13-.92.36-1.3C7.94 8.85 9.88 9.9 12.06 10c-.04-.2-.06-.4-.06-.6 0-1.46 1.18-2.63 2.63-2.63.76 0 1.44.3 1.92.82.6-.12 1.95-.27 1.95-.27-.35.53-.72 1.66-1.24 2.04z"/></svg>
+      </div>
+    </div>
+  </a>
+  
+  
+  <a class="resp-sharing-button__link" href="mailto:?subject=Customize%20your%20Windows%20Terminal%20BASH%20in%20WSL2&amp;body=https%3a%2f%2fjobinjosem.github.io%2f2021%2f08%2fwsl-customization%2f" target="_self" rel="noopener" aria-label="">
+    <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.38 0 0 5.38 0 12s5.38 12 12 12 12-5.38 12-12S18.62 0 12 0zm8 16c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V8c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v8z"/><path d="M17.9 8.18c-.2-.2-.5-.24-.72-.07L12 12.38 6.82 8.1c-.22-.16-.53-.13-.7.08s-.15.53.06.7l3.62 2.97-3.57 2.23c-.23.14-.3.45-.15.7.1.14.25.22.42.22.1 0 .18-.02.27-.08l3.85-2.4 1.06.87c.1.04.2.1.32.1s.23-.06.32-.1l1.06-.9 3.86 2.4c.08.06.17.1.26.1.17 0 .33-.1.42-.25.15-.24.08-.55-.15-.7l-3.57-2.22 3.62-2.96c.2-.2.24-.5.07-.72z"/></svg>
+      </div>
+    </div>
+  </a>
+  
+  
+  <a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fjobinjosem.github.io%2f2021%2f08%2fwsl-customization%2f&amp;title=Customize%20your%20Windows%20Terminal%20BASH%20in%20WSL2&amp;summary=Customize%20your%20Windows%20Terminal%20BASH%20in%20WSL2%20There%20are%20thousands%20of%20articles%20available%20in%20the%20internet%20about%20how%20you%20can%20customize%20your%20bash%20prompt%20in%20different%20ways.%20In%20this%20post%2c%20I%20will%20explain%20how%20to%20personalize%20your%20widows%20terminal%20bash%20prompt%20in%20WSL2%20from%20a%20Devops%20engineer%20viewpoint.%0aOften%20times%20we%20have%20to%20interact%20with%20Cloud%20resources%20in%20Azure%20and%20Kubernetes%20using%20different%20az%20cli%20and%20kubectl.%20How%20about%20showing%20the%20cluster%20you%20are%20connected%2c%20the%20namespace%20you%20are%20in%2c%20the%20current%20azure%20subscription%20and%20the%20git%20repository%20you%20are%20working%20in%20and%20it%26rsquo%3bs%20current%20branch%20all%20in%20one%20place%2c%20awesome%20right%3f" target="_blank" rel="noopener" aria-label="">
+    <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle">
+      <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+          <path d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12s12-5.383,12-12S18.617,0,12,0z M9.5,16.5h-2v-7h2V16.5z M8.5,7.5 c-0.553,0-1-0.448-1-1c0-0.552,0.447-1,1-1s1,0.448,1,1C9.5,7.052,9.053,7.5,8.5,7.5z M18.5,16.5h-3V13c0-0.277-0.225-0.5-0.5-0.5 c-0.276,0-0.5,0.223-0.5,0.5v3.5h-3c0,0,0.031-6.478,0-7h3v0.835c0,0,0.457-0.753,1.707-0.753c1.55,0,2.293,1.12,2.293,3.296V16.5z" />
+      </svg>
+      </div>
+    </div>
+  </a>
+  
+  
+  <a class="resp-sharing-button__link" href="whatsapp://send?text=https%3a%2f%2fjobinjosem.github.io%2f2021%2f08%2fwsl-customization%2f" target="_blank" rel="noopener" aria-label="">
+    <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24"><path d="m12 0c-6.6 0-12 5.4-12 12s5.4 12 12 12 12-5.4 12-12-5.4-12-12-12zm0 3.8c2.2 0 4.2 0.9 5.7 2.4 1.6 1.5 2.4 3.6 2.5 5.7 0 4.5-3.6 8.1-8.1 8.1-1.4 0-2.7-0.4-3.9-1l-4.4 1.1 1.2-4.2c-0.8-1.2-1.1-2.6-1.1-4 0-4.5 3.6-8.1 8.1-8.1zm0.1 1.5c-3.7 0-6.7 3-6.7 6.7 0 1.3 0.3 2.5 1 3.6l0.1 0.3-0.7 2.4 2.5-0.7 0.3 0.099c1 0.7 2.2 1 3.4 1 3.7 0 6.8-3 6.9-6.6 0-1.8-0.7-3.5-2-4.8s-3-2-4.8-2zm-3 2.9h0.4c0.2 0 0.4-0.099 0.5 0.3s0.5 1.5 0.6 1.7 0.1 0.2 0 0.3-0.1 0.2-0.2 0.3l-0.3 0.3c-0.1 0.1-0.2 0.2-0.1 0.4 0.2 0.2 0.6 0.9 1.2 1.4 0.7 0.7 1.4 0.9 1.6 1 0.2 0 0.3 0.001 0.4-0.099s0.5-0.6 0.6-0.8c0.2-0.2 0.3-0.2 0.5-0.1l1.4 0.7c0.2 0.1 0.3 0.2 0.5 0.3 0 0.1 0.1 0.5-0.099 1s-1 0.9-1.4 1c-0.3 0-0.8 0.001-1.3-0.099-0.3-0.1-0.7-0.2-1.2-0.4-2.1-0.9-3.4-3-3.5-3.1s-0.8-1.1-0.8-2.1c0-1 0.5-1.5 0.7-1.7s0.4-0.3 0.5-0.3z"/></svg>
+      </div>
+    </div>
+  </a>
+  
+            
+        </div>
+    </div>
+</nav>
+
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://www.facebook.com" target="_blank" title="facebook" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-facebook"></i></a></li>
+    <li><a href="https://github.com/jobinjosem" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://jobinjosem.github.io/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+    <li><a href="https://twitter.com/jobinjosem" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-twitter"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2021  -
+    2022
+    <div class="publishby">
+        Theme by <a href="https://github.com/jobinjosem" target="_blank"> Jobin Jose </a>based on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+    
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"
+    defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"
+    defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://jobinjosem.github.io/js/application.min.a94ab19cb63a95c8d7fbd7b85cab3ddeea8c369bdf75b9cab6708787ead123af.js"></script>
+<script src="https://jobinjosem.github.io/js/plugin.min.19c5bcb2fb0789ab4f2b7834e5ceb5e92635645605bab902c1024b25f1502364.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            ROOT_URL: 'https:\/\/jobinjosem.github.io',
+            CONTENT_URL: 'https:\/\/jobinjosem.github.io\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://jobinjosem.github.io/js/insight.min.4a2d52de4bfff73e0c688404fe3d17c9a3ae12d9888e1e1ac9c690e4890de2ded50fe55f2b819c2ba55435a76f396f3ea6805765f0b0af5635cdf74ea459eab0.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+<style>
+    .comments {
+         
+         
+         
+        width: auto;
+        margin-left: 18%;
+        margin-right: 22%;
+    }
+</style>
+<div class="comments">
+    <script src="https://giscus.app/client.js" data-repo="jobinjosem/jobinjosem.github.io" data-repo-id="R_kgDOG7QlyA"
+        data-category="General" data-category-id="DIC_kwDOG7QlyM4CN6Jm" data-mapping="pathname"
+        data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en"
+        crossorigin="anonymous" async>
+        </script>
+</div>
+<noscript>Please enable JavaScript to view the comments powered by giscus.</noscript>
+
+  </body>
+</html>
