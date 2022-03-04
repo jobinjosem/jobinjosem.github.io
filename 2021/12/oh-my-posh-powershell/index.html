@@ -45,7 +45,7 @@ Below are the steps I followed to personalize my Powershell prompt.
 Below are the steps I followed to personalize my Powershell prompt.
   Install oh-my-posh."><meta itemprop="datePublished" content="2021-12-04T22:05:30+01:00" />
 <meta itemprop="dateModified" content="2021-12-04T22:05:30+01:00" />
-<meta itemprop="wordCount" content="419">
+<meta itemprop="wordCount" content="425">
 <meta itemprop="keywords" content="wsl,kubernetes,terminal," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Customize your powershell using oh-my-posh"/>
 <meta name="twitter:description" content="In a previous post, I explained how to customize the bash prompt in WSL using kube-ps1. Turns out that kube-ps1 is a bit outdated and there are other cool tools available in the marketplace like oh-my-posh which is widely used among the community. In this post, I will explain how I personalized my PowerShell prompt using oh-my-posh.
@@ -157,7 +157,7 @@ Below are the steps I followed to personalize my Powershell prompt.
     <h3 class="widget-title"> Categories</h3>
     <div class="widget-body">
         <ul class="category-list">
-            <li class="category-list-item"><a href="https://jobinjosem.github.io/categories/wsl/" class="category-list-link">wsl</a><span class="category-list-count">2</span></li>
+            <li class="category-list-item"><a href="https://jobinjosem.github.io/categories/wsl/" class="category-list-link">wsl</a><span class="category-list-count">3</span></li>
         </ul>
     </div>
 </div>
@@ -172,15 +172,15 @@ Below are the steps I followed to personalize my Powershell prompt.
             
             
             <li class="tag-list-item"><a href="https://jobinjosem.github.io/tags/kubernetes/" class="tag-list-link">kubernetes</a><span
-                    class="tag-list-count">2</span></li>
+                    class="tag-list-count">3</span></li>
             
             
             <li class="tag-list-item"><a href="https://jobinjosem.github.io/tags/terminal/" class="tag-list-link">terminal</a><span
-                    class="tag-list-count">2</span></li>
+                    class="tag-list-count">3</span></li>
             
             
             <li class="tag-list-item"><a href="https://jobinjosem.github.io/tags/wsl/" class="tag-list-link">wsl</a><span
-                    class="tag-list-count">2</span></li>
+                    class="tag-list-count">3</span></li>
             
         </ul>
 
@@ -191,6 +191,16 @@ Below are the steps I followed to personalize my Powershell prompt.
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget-body">
         <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://jobinjosem.github.io/2022/01/oh-my-posh-bash/" class="title">Customize your BASH using oh-my-posh</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-01-04 22:05:30 &#43;0100 CET" itemprop="datePublished">2022-01-04</time>
+                    </p>
+                </div>
+            </li>
             <li>
                 <div class="item-inner">
                     <p class="item-title">
@@ -259,7 +269,7 @@ Below are the steps I followed to personalize my Powershell prompt.
     <a class="article-tag-link" href="/tags/terminal/"> terminal </a>
   </span>
 
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 419 words</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 425 words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 2 minutes </span>
       </div>
     </div>
@@ -275,7 +285,7 @@ Below are the steps I followed to personalize my Powershell prompt.
 </code></pre>
 <ol start="2">
 <li>
-<h5 id="install-a-font-that-supports-powerline">Install a font that supports Powerline.</h5>
+<h5 id="install-a-font-that-supports-powerline-symbols">Install a font that supports Powerline symbols.</h5>
 </li>
 </ol>
 <p>Download the <a href="https://www.nerdfonts.com/font-downloads">Caskaydia Cove Nerd Font</a>. Extract the zip file, select them all and right-click to install.</p>
@@ -284,7 +294,7 @@ Below are the steps I followed to personalize my Powershell prompt.
 <h5 id="set-the-caskaydia-font-on-the-settings-of-the-windows-terminal">Set the Caskaydia font on the settings of the windows terminal.</h5>
 </li>
 </ol>
-<p>Navigate to Windows Terminal &ndash;&gt; Settings &ndash;&gt; Powershell &ndash;&gt; Appearance &ndash;&gt; Font face. Then choose <code>CaskaydiaCove Nerd Font</code> and save.</p>
+<p>Navigate to Windows Terminal &ndash;&gt; Settings &ndash;&gt; Powershell &ndash;&gt; Appearance &ndash;&gt; Font face. Then choose <code>CaskaydiaCove Nerd Font</code> and click save.</p>
 <ol start="4">
 <li>
 <h5 id="preview-and-set-the-theme">Preview and set the theme.</h5>
@@ -323,7 +333,7 @@ Then set alias by adding below lines in <code>$PROFILE</code></p>
 <pre><code>Set-Alias -Name x -Value '&lt;PATH&gt;\kubectx.exe'
 Set-Alias -Name n -Value '&lt;PATH&gt;\kubens.exe'
 </code></pre>
-<p>We can easily change your Kubernetes cluster by typing <code>x</code> and press enter. A list of available Kubernetes clusters in your kubecfg will be shown.</p>
+<p>With kubectx we can easily switch between different Kubernetes clusters by typing <code>x</code> and press enter. A list of available Kubernetes cluster contexts in your <code>kubecfg</code> will be shown.</p>
 <p>Similarly pressing <code>n</code> will list all the namespaces in the selected cluster and you can select from the list.</p>
 <p>Thanks for reading. Please do share your feedback.😊</p>
 
@@ -339,6 +349,10 @@ Set-Alias -Name n -Value '&lt;PATH&gt;\kubens.exe'
                 <li class="prev">
                     <a href="https://jobinjosem.github.io/2021/08/wsl-customization/" title="Customize your Windows Terminal BASH in WSL2"><i class="icon icon-angle-left"
                             aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+                </li>
+                <li class="next">
+                    <a href="https://jobinjosem.github.io/2022/01/oh-my-posh-bash/" title="Customize your BASH using oh-my-posh"><span>Newer&nbsp;&nbsp;</span><i
+                            class="icon icon-angle-right" aria-hidden="true"></i></a>
                 </li>
                 
                 <li class="toggle-toc">

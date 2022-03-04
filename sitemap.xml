@@ -4,62 +4,69 @@
   
   <url>
     <loc>https://jobinjosem.github.io/</loc>
-    <lastmod>2021-12-04T22:05:30+01:00</lastmod>
+    <lastmod>2022-01-04T22:05:30+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://jobinjosem.github.io/categories/</loc>
-    <lastmod>2021-12-04T22:05:30+01:00</lastmod>
+    <lastmod>2022-01-04T22:05:30+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://jobinjosem.github.io/2021/12/oh-my-posh-powershell/</loc>
-    <lastmod>2021-12-04T22:05:30+01:00</lastmod>
+    <loc>https://jobinjosem.github.io/2022/01/oh-my-posh-bash/</loc>
+    <lastmod>2022-01-04T22:05:30+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://jobinjosem.github.io/tags/kubernetes/</loc>
-    <lastmod>2021-12-04T22:05:30+01:00</lastmod>
+    <lastmod>2022-01-04T22:05:30+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://jobinjosem.github.io/posts/</loc>
-    <lastmod>2021-12-04T22:05:30+01:00</lastmod>
+    <lastmod>2022-01-04T22:05:30+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://jobinjosem.github.io/tags/</loc>
-    <lastmod>2021-12-04T22:05:30+01:00</lastmod>
+    <lastmod>2022-01-04T22:05:30+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://jobinjosem.github.io/tags/terminal/</loc>
-    <lastmod>2021-12-04T22:05:30+01:00</lastmod>
+    <lastmod>2022-01-04T22:05:30+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://jobinjosem.github.io/tags/wsl/</loc>
-    <lastmod>2021-12-04T22:05:30+01:00</lastmod>
+    <lastmod>2022-01-04T22:05:30+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://jobinjosem.github.io/categories/wsl/</loc>
+    <lastmod>2022-01-04T22:05:30+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jobinjosem.github.io/2021/12/oh-my-posh-powershell/</loc>
     <lastmod>2021-12-04T22:05:30+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

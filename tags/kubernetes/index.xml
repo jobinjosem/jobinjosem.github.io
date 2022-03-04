@@ -5,10 +5,21 @@
     <link>https://jobinjosem.github.io/tags/kubernetes/</link>
     <description>Recent content in kubernetes on A Devops Engineering Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 04 Dec 2021 22:05:30 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 04 Jan 2022 22:05:30 +0100</lastBuildDate>
     
         <atom:link href="https://jobinjosem.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Customize your BASH using oh-my-posh</title>
+      <link>https://jobinjosem.github.io/2022/01/oh-my-posh-bash/</link>
+      <pubDate>Tue, 04 Jan 2022 22:05:30 +0100</pubDate>
+      
+      <guid>https://jobinjosem.github.io/2022/01/oh-my-posh-bash/</guid>
+      <description>I have created another post where I explained how to customize PowerShell using oh-my-posh. If you want to customize your PowerShell, then the link is here.
+In this post, I will explain how I tweaked my bash prompt in WSL using oh-my-posh. Below are the steps I followed to personalize my bash shell.
+  Install oh-my-posh.   sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh sudo chmod +x /usr/local/bin/oh-my-posh   Install a font that supports Powerline symbols.</description>
+    </item>
     
     <item>
       <title>Customize your powershell using oh-my-posh</title>

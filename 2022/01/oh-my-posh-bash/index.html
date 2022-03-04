@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>
-        Customize your Windows Terminal BASH in WSL2 - A Devops Engineering Blog
+        Customize your BASH using oh-my-posh - A Devops Engineering Blog
       </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -20,33 +20,37 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    <meta name="description" content="There are thousands of articles available on the internet about how you can customize your bash prompt in different ways. In this post, I will explain how to personalize your widows terminal bash prompt in WSL2 from a DevOps engineer viewpoint.
-Often we have to interact with Cloud resources in Azure and Kubernetes using different az cli and kubectl. How about showing the cluster you are connected to, the namespace you are in, the current Azure subscription, and the git repository you are working in and its current branch all in one place, awesome right?" />
+    <meta name="description" content="I have created another post where I explained how to customize PowerShell using oh-my-posh. If you want to customize your PowerShell, then the link is here.
+In this post, I will explain how I tweaked my bash prompt in WSL using oh-my-posh. Below are the steps I followed to personalize my bash shell.
+  Install oh-my-posh.   sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh sudo chmod &#43;x /usr/local/bin/oh-my-posh   Install a font that supports Powerline symbols." />
     <meta name="generator" content="Hugo 0.92.2 with theme pure" />
-    <title>Customize your Windows Terminal BASH in WSL2 - A Devops Engineering Blog</title>
+    <title>Customize your BASH using oh-my-posh - A Devops Engineering Blog</title>
     
     
     <link rel="stylesheet" href="https://jobinjosem.github.io/css/style.min.d60a90e4e9b2c52d331f70e6c6c79de8fffe0d6a37e8a782868c3274bd558420.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="Customize your Windows Terminal BASH in WSL2" />
-<meta property="og:description" content="There are thousands of articles available on the internet about how you can customize your bash prompt in different ways. In this post, I will explain how to personalize your widows terminal bash prompt in WSL2 from a DevOps engineer viewpoint.
-Often we have to interact with Cloud resources in Azure and Kubernetes using different az cli and kubectl. How about showing the cluster you are connected to, the namespace you are in, the current Azure subscription, and the git repository you are working in and its current branch all in one place, awesome right?" />
+    <meta property="og:title" content="Customize your BASH using oh-my-posh" />
+<meta property="og:description" content="I have created another post where I explained how to customize PowerShell using oh-my-posh. If you want to customize your PowerShell, then the link is here.
+In this post, I will explain how I tweaked my bash prompt in WSL using oh-my-posh. Below are the steps I followed to personalize my bash shell.
+  Install oh-my-posh.   sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh sudo chmod &#43;x /usr/local/bin/oh-my-posh   Install a font that supports Powerline symbols." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jobinjosem.github.io/2021/08/wsl-customization/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-08-01T20:36:49+01:00" />
-<meta property="article:modified_time" content="2021-08-01T20:36:49+01:00" />
+<meta property="og:url" content="https://jobinjosem.github.io/2022/01/oh-my-posh-bash/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-01-04T22:05:30+01:00" />
+<meta property="article:modified_time" content="2022-01-04T22:05:30+01:00" />
 
-<meta itemprop="name" content="Customize your Windows Terminal BASH in WSL2">
-<meta itemprop="description" content="There are thousands of articles available on the internet about how you can customize your bash prompt in different ways. In this post, I will explain how to personalize your widows terminal bash prompt in WSL2 from a DevOps engineer viewpoint.
-Often we have to interact with Cloud resources in Azure and Kubernetes using different az cli and kubectl. How about showing the cluster you are connected to, the namespace you are in, the current Azure subscription, and the git repository you are working in and its current branch all in one place, awesome right?"><meta itemprop="datePublished" content="2021-08-01T20:36:49+01:00" />
-<meta itemprop="dateModified" content="2021-08-01T20:36:49+01:00" />
-<meta itemprop="wordCount" content="298">
+<meta itemprop="name" content="Customize your BASH using oh-my-posh">
+<meta itemprop="description" content="I have created another post where I explained how to customize PowerShell using oh-my-posh. If you want to customize your PowerShell, then the link is here.
+In this post, I will explain how I tweaked my bash prompt in WSL using oh-my-posh. Below are the steps I followed to personalize my bash shell.
+  Install oh-my-posh.   sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh sudo chmod &#43;x /usr/local/bin/oh-my-posh   Install a font that supports Powerline symbols."><meta itemprop="datePublished" content="2022-01-04T22:05:30+01:00" />
+<meta itemprop="dateModified" content="2022-01-04T22:05:30+01:00" />
+<meta itemprop="wordCount" content="290">
 <meta itemprop="keywords" content="wsl,kubernetes,terminal," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Customize your Windows Terminal BASH in WSL2"/>
-<meta name="twitter:description" content="There are thousands of articles available on the internet about how you can customize your bash prompt in different ways. In this post, I will explain how to personalize your widows terminal bash prompt in WSL2 from a DevOps engineer viewpoint.
-Often we have to interact with Cloud resources in Azure and Kubernetes using different az cli and kubectl. How about showing the cluster you are connected to, the namespace you are in, the current Azure subscription, and the git repository you are working in and its current branch all in one place, awesome right?"/>
+<meta name="twitter:title" content="Customize your BASH using oh-my-posh"/>
+<meta name="twitter:description" content="I have created another post where I explained how to customize PowerShell using oh-my-posh. If you want to customize your PowerShell, then the link is here.
+In this post, I will explain how I tweaked my bash prompt in WSL using oh-my-posh. Below are the steps I followed to personalize my bash shell.
+  Install oh-my-posh.   sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh sudo chmod &#43;x /usr/local/bin/oh-my-posh   Install a font that supports Powerline symbols."/>
 
     <!--[if lte IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -241,8 +245,8 @@ Often we have to interact with Cloud resources in Azure and Kubernetes using dif
       <h1 itemprop="name">
   <a
     class="article-title"
-    href="/2021/08/wsl-customization/"
-    >Customize your Windows Terminal BASH in WSL2</a
+    href="/2022/01/oh-my-posh-bash/"
+    >Customize your BASH using oh-my-posh</a
   >
 </h1>
 
@@ -250,8 +254,8 @@ Often we have to interact with Cloud resources in Azure and Kubernetes using dif
         
 <span class="article-date">
   <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://jobinjosem.github.io/2021/08/wsl-customization/" class="article-date">
-  <time datetime="2021-08-01 20:36:49 &#43;0100 &#43;0100" itemprop="datePublished">2021-08-01</time>
+<a href="https://jobinjosem.github.io/2022/01/oh-my-posh-bash/" class="article-date">
+  <time datetime="2022-01-04 22:05:30 &#43;0100 CET" itemprop="datePublished">2022-01-04</time>
 </a>
 </span>
 <span class="article-category">
@@ -265,68 +269,67 @@ Often we have to interact with Cloud resources in Azure and Kubernetes using dif
     <a class="article-tag-link" href="/tags/terminal/"> terminal </a>
   </span>
 
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 298 words</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 290 words</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 2 minutes </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <p>There are thousands of articles available on the internet about how you can customize your bash prompt in different ways. In this post, I will explain how to personalize your widows terminal bash prompt in WSL2 from a DevOps engineer viewpoint.</p>
-<p>Often we have to interact with Cloud resources in Azure and Kubernetes using different <code>az cli</code> and <code>kubectl</code>. How about showing the cluster you are connected to, the namespace you are in, the current Azure subscription, and the git repository you are working in and its current branch all in one place, awesome right? Let me explain how I did this.</p>
-<p>There are some prerequisites you have to install to get this working.</p>
+      <p>I have created another post where I explained how to customize PowerShell using <code>oh-my-posh</code>. If you want to customize your PowerShell, then the link is <a href="https://jobinjosem.github.io/2021/12/oh-my-posh-powershell/">here</a>.</p>
+<p>In this post, I will explain how I tweaked my bash prompt in WSL using oh-my-posh. Below are the steps I followed to personalize my bash shell.</p>
 <ol>
 <li>
-<h5 id="install-kubectl--git">Install kubectl + git</h5>
+<h5 id="install-oh-my-posh">Install oh-my-posh.</h5>
 </li>
 </ol>
-<pre><code>curl -LO &quot;https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl&quot;
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-sudo apt-get install git
+<pre><code>sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
+sudo chmod +x /usr/local/bin/oh-my-posh
 </code></pre>
 <ol start="2">
 <li>
-<h5 id="copy-kube-ps1sh-from-kube-ps1httpsgithubcomjonmoscokube-ps1">Copy <code>kube-ps1.sh</code> from <a href="https://github.com/jonmosco/kube-ps1">kube-ps1</a></h5>
+<h5 id="install-a-font-that-supports-powerline-symbols">Install a font that supports Powerline symbols.</h5>
 </li>
 </ol>
-<pre><code>git clone https://github.com/jonmosco/kube-ps1
-mv kube-ps1/kube-ps1.sh ~
-rm -rf kube-ps1
-</code></pre>
+<p>Download the <a href="https://www.nerdfonts.com/font-downloads">Caskaydia Cove Nerd Font</a>. Extract the zip file, select them all and right-click to install.</p>
 <ol start="3">
 <li>
-<h5 id="obtain-kubectx--kubens-from-kubectxhttpsgithubcomahmetbkubectx">Obtain kubectx + kubens from <a href="https://github.com/ahmetb/kubectx">kubectx</a></h5>
+<h5 id="set-the-caskaydia-font-on-the-settings-of-the-windows-terminal">Set the Caskaydia font on the settings of the windows terminal.</h5>
 </li>
 </ol>
-<pre><code>sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
-sudo mv /opt/kubectx/kubectx /usr/local/bin/kubectx
-sudo mv /opt/kubectx/kubens /usr/local/bin/kubens
-rm -rf /opt/kubectx
-</code></pre>
+<p>Navigate to Windows Terminal &ndash;&gt; Settings &ndash;&gt; Ubuntu &ndash;&gt; Appearance &ndash;&gt; Font face. Then choose <code>CaskaydiaCove Nerd Font</code> and click save.</p>
 <ol start="4">
 <li>
-<h5 id="install-fzf">Install fzf</h5>
+<h5 id="get-the-custom-configuration-file">Get the custom configuration file.</h5>
 </li>
 </ol>
-<pre><code>git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+<pre><code>mkdir ~/.poshthemes
+git clone https://github.com/jobinjosem/oh-my-posh-custom-theme.git ~/.poshthemes
 </code></pre>
 <ol start="5">
 <li>
-<h5 id="install-jq">Install jq</h5>
+<h5 id="add-the-following-to-bashrc-could-be-profile-or--depending-on-your-environment">Add the following to <code>~/.bashrc </code>(could be <code>~/.profile</code> or ```` depending on your environment)</h5>
 </li>
 </ol>
-<pre><code>sudo apt update
-sudo apt install -y jq
+<pre><code>eval &quot;$(oh-my-posh --init --shell bash --config '~/.poshthemes/mytheme.omp.json')&quot;
 </code></pre>
+<p>Once added, reload your profile for the changes to take effect by running <code>exec bash</code></p>
 <ol start="6">
 <li>
-<h5 id="edit-your-bashrc-file">Edit your [~/.bashrc] file</h5>
+<h5 id="add-kubectx--kubens">Add kubectx + kubens</h5>
 </li>
 </ol>
-<p>Add the below lines to your .bashrc file.</p>
-<pre><code>source ~/kube-ps1.sh
-alias n='kubens'
-alias x='kubectx'
-PS1='$(kube_ps1)'&quot;\[\e[33m\] \D{%H:%M} \[\033[95m\][\$(az account show 2&gt;/dev/null | jq -r .name)] \[\e[32m\]\W \[\033[33m\][\$(git symbolic-ref --short HEAD 2&gt;/dev/null)] \[\e[00m\]$ &quot;
+<p>This will help to switch between different kubernetes clusters and namespaces, We need to download the <a href="https://github.com/ahmetb/kubectx/releases">kubectx</a> and <a href="https://github.com/ahmetb/kubectx/releases">kubens</a> binaries and install <a href="https://github.com/junegunn/fzf">fuzzyfinder</a></p>
+<pre><code>wget -LO kubectx.tar.gz https://github.com/ahmetb/kubectx/releases/download/v0.9.4/kubectx_v0.9.4_linux_x86_64.tar.gz
+tar -xvf kubectx.tar.gz
+chmod +x kubectx
+mv kubectx /usr/local/bin/
+
+wget -LO kubens.tar.gz https://github.com/ahmetb/kubectx/releases/download/v0.9.4/kubens_v0.9.4_linux_x86_64.tar.gz
+tar -xvf kubens.tar.gz
+chmod +x kubens
+mv kubens /usr/local/bin
+
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 </code></pre>
 <ol start="7">
 <li>
@@ -335,11 +338,9 @@ PS1='$(kube_ps1)'&quot;\[\e[33m\] \D{%H:%M} \[\033[95m\][\$(az account show 2&gt
 </ol>
 <pre><code>source ~/.bashrc
 </code></pre>
-<p>You can easily switch between different Kubernetes clusters by typing <code>x</code> and press <code>enter</code>. A list of available Kubernetes clusters in your <code>kubecfg</code> will be shown.</p>
+<p>With kubectx we can easily switch between different Kubernetes clusters by typing <code>x</code> and press enter. A list of available Kubernetes cluster contexts in your <code>kubecfg</code> will be shown.</p>
 <p>Similarly pressing <code>n</code> will list all the namespaces in the selected cluster and you can select from the list.</p>
-<p>You are done. The terminal must look like this!!</p>
-<p><img src="/images/wsl-bash-customization.png" alt="demo"></p>
-<p>Thank You for reading. Please do share your feedback.😊</p>
+<p>Thanks for reading. Please do share your feedback.😊</p>
 
     </div>
     <div class="article-footer">
@@ -351,12 +352,8 @@ PS1='$(kube_ps1)'&quot;\[\e[33m\] \D{%H:%M} \[\033[95m\][\$(az account show 2&gt
         <strong>
             <ul class="pager pull-left">
                 <li class="prev">
-                    <a href="https://jobinjosem.github.io/about/" title="About"><i class="icon icon-angle-left"
+                    <a href="https://jobinjosem.github.io/2021/12/oh-my-posh-powershell/" title="Customize your powershell using oh-my-posh"><i class="icon icon-angle-left"
                             aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
-                </li>
-                <li class="next">
-                    <a href="https://jobinjosem.github.io/2021/12/oh-my-posh-powershell/" title="Customize your powershell using oh-my-posh"><span>Newer&nbsp;&nbsp;</span><i
-                            class="icon icon-angle-right" aria-hidden="true"></i></a>
                 </li>
                 
                 <li class="toggle-toc">
@@ -371,7 +368,7 @@ PS1='$(kube_ps1)'&quot;\[\e[33m\] \D{%H:%M} \[\033[95m\][\$(az account show 2&gt
             </ul>
         </strong>
         <div class="bar-right">
-<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjobinjosem.github.io%2f2021%2f08%2fwsl-customization%2f" target="_blank" rel="noopener" aria-label="">
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjobinjosem.github.io%2f2022%2f01%2foh-my-posh-bash%2f" target="_blank" rel="noopener" aria-label="">
     <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.38 0 0 5.38 0 12s5.38 12 12 12 12-5.38 12-12S18.62 0 12 0zm3.6 11.5h-2.1v7h-3v-7h-2v-2h2V8.34c0-1.1.35-2.82 2.65-2.82h2.35v2.3h-1.4c-.25 0-.6.13-.6.66V9.5h2.34l-.24 2z"/></svg>
       </div>
@@ -379,7 +376,7 @@ PS1='$(kube_ps1)'&quot;\[\e[33m\] \D{%H:%M} \[\033[95m\][\$(az account show 2&gt
   </a>
   
   
-  <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Customize%20your%20Windows%20Terminal%20BASH%20in%20WSL2&amp;url=https%3a%2f%2fjobinjosem.github.io%2f2021%2f08%2fwsl-customization%2f" target="_blank" rel="noopener" aria-label="">
+  <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Customize%20your%20BASH%20using%20oh-my-posh&amp;url=https%3a%2f%2fjobinjosem.github.io%2f2022%2f01%2foh-my-posh-bash%2f" target="_blank" rel="noopener" aria-label="">
     <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.38 0 0 5.38 0 12s5.38 12 12 12 12-5.38 12-12S18.62 0 12 0zm5.26 9.38v.34c0 3.48-2.64 7.5-7.48 7.5-1.48 0-2.87-.44-4.03-1.2 1.37.17 2.77-.2 3.9-1.08-1.16-.02-2.13-.78-2.46-1.83.38.1.8.07 1.17-.03-1.2-.24-2.1-1.3-2.1-2.58v-.05c.35.2.75.32 1.18.33-.7-.47-1.17-1.28-1.17-2.2 0-.47.13-.92.36-1.3C7.94 8.85 9.88 9.9 12.06 10c-.04-.2-.06-.4-.06-.6 0-1.46 1.18-2.63 2.63-2.63.76 0 1.44.3 1.92.82.6-.12 1.95-.27 1.95-.27-.35.53-.72 1.66-1.24 2.04z"/></svg>
       </div>
@@ -387,7 +384,7 @@ PS1='$(kube_ps1)'&quot;\[\e[33m\] \D{%H:%M} \[\033[95m\][\$(az account show 2&gt
   </a>
   
   
-  <a class="resp-sharing-button__link" href="mailto:?subject=Customize%20your%20Windows%20Terminal%20BASH%20in%20WSL2&amp;body=https%3a%2f%2fjobinjosem.github.io%2f2021%2f08%2fwsl-customization%2f" target="_self" rel="noopener" aria-label="">
+  <a class="resp-sharing-button__link" href="mailto:?subject=Customize%20your%20BASH%20using%20oh-my-posh&amp;body=https%3a%2f%2fjobinjosem.github.io%2f2022%2f01%2foh-my-posh-bash%2f" target="_self" rel="noopener" aria-label="">
     <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.38 0 0 5.38 0 12s5.38 12 12 12 12-5.38 12-12S18.62 0 12 0zm8 16c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V8c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v8z"/><path d="M17.9 8.18c-.2-.2-.5-.24-.72-.07L12 12.38 6.82 8.1c-.22-.16-.53-.13-.7.08s-.15.53.06.7l3.62 2.97-3.57 2.23c-.23.14-.3.45-.15.7.1.14.25.22.42.22.1 0 .18-.02.27-.08l3.85-2.4 1.06.87c.1.04.2.1.32.1s.23-.06.32-.1l1.06-.9 3.86 2.4c.08.06.17.1.26.1.17 0 .33-.1.42-.25.15-.24.08-.55-.15-.7l-3.57-2.22 3.62-2.96c.2-.2.24-.5.07-.72z"/></svg>
       </div>
@@ -395,7 +392,7 @@ PS1='$(kube_ps1)'&quot;\[\e[33m\] \D{%H:%M} \[\033[95m\][\$(az account show 2&gt
   </a>
   
   
-  <a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fjobinjosem.github.io%2f2021%2f08%2fwsl-customization%2f&amp;title=Customize%20your%20Windows%20Terminal%20BASH%20in%20WSL2&amp;summary=There%20are%20thousands%20of%20articles%20available%20on%20the%20internet%20about%20how%20you%20can%20customize%20your%20bash%20prompt%20in%20different%20ways.%20In%20this%20post%2c%20I%20will%20explain%20how%20to%20personalize%20your%20widows%20terminal%20bash%20prompt%20in%20WSL2%20from%20a%20DevOps%20engineer%20viewpoint.%0aOften%20we%20have%20to%20interact%20with%20Cloud%20resources%20in%20Azure%20and%20Kubernetes%20using%20different%20az%20cli%20and%20kubectl.%20How%20about%20showing%20the%20cluster%20you%20are%20connected%20to%2c%20the%20namespace%20you%20are%20in%2c%20the%20current%20Azure%20subscription%2c%20and%20the%20git%20repository%20you%20are%20working%20in%20and%20its%20current%20branch%20all%20in%20one%20place%2c%20awesome%20right%3f" target="_blank" rel="noopener" aria-label="">
+  <a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fjobinjosem.github.io%2f2022%2f01%2foh-my-posh-bash%2f&amp;title=Customize%20your%20BASH%20using%20oh-my-posh&amp;summary=I%20have%20created%20another%20post%20where%20I%20explained%20how%20to%20customize%20PowerShell%20using%20oh-my-posh.%20If%20you%20want%20to%20customize%20your%20PowerShell%2c%20then%20the%20link%20is%20here.%0aIn%20this%20post%2c%20I%20will%20explain%20how%20I%20tweaked%20my%20bash%20prompt%20in%20WSL%20using%20oh-my-posh.%20Below%20are%20the%20steps%20I%20followed%20to%20personalize%20my%20bash%20shell.%0a%20%20Install%20oh-my-posh.%20%20%20sudo%20wget%20https%3a%2f%2fgithub.com%2fJanDeDobbeleer%2foh-my-posh%2freleases%2flatest%2fdownload%2fposh-linux-amd64%20-O%20%2fusr%2flocal%2fbin%2foh-my-posh%20sudo%20chmod%20%2bx%20%2fusr%2flocal%2fbin%2foh-my-posh%20%20%20Install%20a%20font%20that%20supports%20Powerline%20symbols." target="_blank" rel="noopener" aria-label="">
     <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle">
       <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
           <path d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12s12-5.383,12-12S18.617,0,12,0z M9.5,16.5h-2v-7h2V16.5z M8.5,7.5 c-0.553,0-1-0.448-1-1c0-0.552,0.447-1,1-1s1,0.448,1,1C9.5,7.052,9.053,7.5,8.5,7.5z M18.5,16.5h-3V13c0-0.277-0.225-0.5-0.5-0.5 c-0.276,0-0.5,0.223-0.5,0.5v3.5h-3c0,0,0.031-6.478,0-7h3v0.835c0,0,0.457-0.753,1.707-0.753c1.55,0,2.293,1.12,2.293,3.296V16.5z" />
@@ -405,7 +402,7 @@ PS1='$(kube_ps1)'&quot;\[\e[33m\] \D{%H:%M} \[\033[95m\][\$(az account show 2&gt
   </a>
   
   
-  <a class="resp-sharing-button__link" href="whatsapp://send?text=https%3a%2f%2fjobinjosem.github.io%2f2021%2f08%2fwsl-customization%2f" target="_blank" rel="noopener" aria-label="">
+  <a class="resp-sharing-button__link" href="whatsapp://send?text=https%3a%2f%2fjobinjosem.github.io%2f2022%2f01%2foh-my-posh-bash%2f" target="_blank" rel="noopener" aria-label="">
     <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solidcircle">
       <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24"><path d="m12 0c-6.6 0-12 5.4-12 12s5.4 12 12 12 12-5.4 12-12-5.4-12-12-12zm0 3.8c2.2 0 4.2 0.9 5.7 2.4 1.6 1.5 2.4 3.6 2.5 5.7 0 4.5-3.6 8.1-8.1 8.1-1.4 0-2.7-0.4-3.9-1l-4.4 1.1 1.2-4.2c-0.8-1.2-1.1-2.6-1.1-4 0-4.5 3.6-8.1 8.1-8.1zm0.1 1.5c-3.7 0-6.7 3-6.7 6.7 0 1.3 0.3 2.5 1 3.6l0.1 0.3-0.7 2.4 2.5-0.7 0.3 0.099c1 0.7 2.2 1 3.4 1 3.7 0 6.8-3 6.9-6.6 0-1.8-0.7-3.5-2-4.8s-3-2-4.8-2zm-3 2.9h0.4c0.2 0 0.4-0.099 0.5 0.3s0.5 1.5 0.6 1.7 0.1 0.2 0 0.3-0.1 0.2-0.2 0.3l-0.3 0.3c-0.1 0.1-0.2 0.2-0.1 0.4 0.2 0.2 0.6 0.9 1.2 1.4 0.7 0.7 1.4 0.9 1.6 1 0.2 0 0.3 0.001 0.4-0.099s0.5-0.6 0.6-0.8c0.2-0.2 0.3-0.2 0.5-0.1l1.4 0.7c0.2 0.1 0.3 0.2 0.5 0.3 0 0.1 0.1 0.5-0.099 1s-1 0.9-1.4 1c-0.3 0-0.8 0.001-1.3-0.099-0.3-0.1-0.7-0.2-1.2-0.4-2.1-0.9-3.4-3-3.5-3.1s-0.8-1.1-0.8-2.1c0-1 0.5-1.5 0.7-1.7s0.4-0.3 0.5-0.3z"/></svg>
       </div>
