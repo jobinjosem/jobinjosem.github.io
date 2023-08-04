@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>terminal on Devopsnest Blog</title>
-    <link>https://docs.devopsnest.com/tags/terminal/</link>
+    <link>https://jobinjosem.github.io/tags/terminal/</link>
     <description>Recent content in terminal on Devopsnest Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Jan 2022 22:05:30 +0100</lastBuildDate><atom:link href="https://docs.devopsnest.com/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Jan 2022 22:05:30 +0100</lastBuildDate><atom:link href="https://jobinjosem.github.io/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Customize your BASH using oh-my-posh</title>
-      <link>https://docs.devopsnest.com/post/oh-my-posh-bash/</link>
+      <link>https://jobinjosem.github.io/post/oh-my-posh-bash/</link>
       <pubDate>Tue, 04 Jan 2022 22:05:30 +0100</pubDate>
       
-      <guid>https://docs.devopsnest.com/post/oh-my-posh-bash/</guid>
+      <guid>https://jobinjosem.github.io/post/oh-my-posh-bash/</guid>
       <description>&lt;p&gt;In this post, I will explain how I tweaked my bash prompt in WSL using oh-my-posh.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Customize your powershell using oh-my-posh</title>
-      <link>https://docs.devopsnest.com/post/oh-my-posh-powershell/</link>
+      <link>https://jobinjosem.github.io/post/oh-my-posh-powershell/</link>
       <pubDate>Sat, 04 Dec 2021 22:05:30 +0100</pubDate>
       
-      <guid>https://docs.devopsnest.com/post/oh-my-posh-powershell/</guid>
+      <guid>https://jobinjosem.github.io/post/oh-my-posh-powershell/</guid>
       <description>In a previous post, I explained how to customize the bash prompt in WSL using kube-ps1. Turns out that kube-ps1 is a bit outdated and there are other cool tools available in the marketplace like oh-my-posh which is widely used among the community. In this post, I will explain how I personalized my PowerShell prompt using oh-my-posh.
 Below are the steps I followed to personalize my Powershell prompt.
 Install oh-my-posh. Install-Module oh-my-posh -Scope CurrentUser -AllowPrerelease Install a font that supports Powerline symbols.</description>
@@ -29,10 +29,10 @@ Install oh-my-posh. Install-Module oh-my-posh -Scope CurrentUser -AllowPrereleas
     
     <item>
       <title>Customize your Windows Terminal BASH in WSL2</title>
-      <link>https://docs.devopsnest.com/post/wsl-customization/</link>
+      <link>https://jobinjosem.github.io/post/wsl-customization/</link>
       <pubDate>Sun, 01 Aug 2021 20:36:49 +0100</pubDate>
       
-      <guid>https://docs.devopsnest.com/post/wsl-customization/</guid>
+      <guid>https://jobinjosem.github.io/post/wsl-customization/</guid>
       <description>There are thousands of articles available on the internet about how you can customize your bash prompt in different ways. In this post, I will explain how to personalize your widows terminal bash prompt in WSL2 from a DevOps engineer viewpoint.
 Often we have to interact with Cloud resources in Azure and Kubernetes using different az cli and kubectl. How about showing the cluster you are connected to, the namespace you are in, the current Azure subscription, and the git repository you are working in and its current branch all in one place, awesome right?</description>
     </item>

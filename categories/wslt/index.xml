@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>wslt on Devopsnest Blog</title>
-    <link>https://docs.devopsnest.com/categories/wslt/</link>
+    <link>https://jobinjosem.github.io/categories/wslt/</link>
     <description>Recent content in wslt on Devopsnest Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Aug 2021 20:36:49 +0100</lastBuildDate><atom:link href="https://docs.devopsnest.com/categories/wslt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Aug 2021 20:36:49 +0100</lastBuildDate><atom:link href="https://jobinjosem.github.io/categories/wslt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Customize your Windows Terminal BASH in WSL2</title>
-      <link>https://docs.devopsnest.com/post/wsl-customization/</link>
+      <link>https://jobinjosem.github.io/post/wsl-customization/</link>
       <pubDate>Sun, 01 Aug 2021 20:36:49 +0100</pubDate>
       
-      <guid>https://docs.devopsnest.com/post/wsl-customization/</guid>
+      <guid>https://jobinjosem.github.io/post/wsl-customization/</guid>
       <description>There are thousands of articles available on the internet about how you can customize your bash prompt in different ways. In this post, I will explain how to personalize your widows terminal bash prompt in WSL2 from a DevOps engineer viewpoint.
 Often we have to interact with Cloud resources in Azure and Kubernetes using different az cli and kubectl. How about showing the cluster you are connected to, the namespace you are in, the current Azure subscription, and the git repository you are working in and its current branch all in one place, awesome right?</description>
     </item>

@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Devopsnest Blog</title>
-    <link>https://docs.devopsnest.com/categories/</link>
+    <link>https://jobinjosem.github.io/categories/</link>
     <description>Recent content in Categories on Devopsnest Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Jan 2022 22:05:30 +0100</lastBuildDate><atom:link href="https://docs.devopsnest.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Jan 2022 22:05:30 +0100</lastBuildDate><atom:link href="https://jobinjosem.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>wsl1</title>
-      <link>https://docs.devopsnest.com/categories/wsl1/</link>
+      <link>https://jobinjosem.github.io/categories/wsl1/</link>
       <pubDate>Tue, 04 Jan 2022 22:05:30 +0100</pubDate>
       
-      <guid>https://docs.devopsnest.com/categories/wsl1/</guid>
+      <guid>https://jobinjosem.github.io/categories/wsl1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>wsl</title>
-      <link>https://docs.devopsnest.com/categories/wsl/</link>
+      <link>https://jobinjosem.github.io/categories/wsl/</link>
       <pubDate>Sat, 04 Dec 2021 22:05:30 +0100</pubDate>
       
-      <guid>https://docs.devopsnest.com/categories/wsl/</guid>
+      <guid>https://jobinjosem.github.io/categories/wsl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>wslt</title>
-      <link>https://docs.devopsnest.com/categories/wslt/</link>
+      <link>https://jobinjosem.github.io/categories/wslt/</link>
       <pubDate>Sun, 01 Aug 2021 20:36:49 +0100</pubDate>
       
-      <guid>https://docs.devopsnest.com/categories/wslt/</guid>
+      <guid>https://jobinjosem.github.io/categories/wslt/</guid>
       <description></description>
     </item>
     
