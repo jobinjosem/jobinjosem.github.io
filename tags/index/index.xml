@@ -1,54 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>index on A Devops Engineering Blog</title>
-    <link>https://jobinjosem.github.io/tags/index/</link>
-    <description>Recent content in index on A Devops Engineering Blog</description>
+    <title>index on Devopsnest Blog</title>
+    <link>https://docs.devopsnest.com/tags/index/</link>
+    <description>Recent content in index on Devopsnest Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    
-        <atom:link href="https://jobinjosem.github.io/tags/index/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://docs.devopsnest.com/tags/index/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Customize your BASH using oh-my-posh</title>
-      <link>https://jobinjosem.github.io/2022/01/oh-my-posh-bash/</link>
-      <pubDate>Tue, 04 Jan 2022 22:05:30 +0100</pubDate>
-      
-      <guid>https://jobinjosem.github.io/2022/01/oh-my-posh-bash/</guid>
-      <description>I have created another post where I explained how to customize PowerShell using oh-my-posh. If you want to customize your PowerShell, then the link is here.
-In this post, I will explain how I tweaked my bash prompt in WSL using oh-my-posh. Below are the steps I followed to personalize my bash shell.
-  Install oh-my-posh.   sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh sudo chmod +x /usr/local/bin/oh-my-posh   Install a font that supports Powerline symbols.</description>
-    </item>
-    
-    <item>
-      <title>Customize your powershell using oh-my-posh</title>
-      <link>https://jobinjosem.github.io/2021/12/oh-my-posh-powershell/</link>
-      <pubDate>Sat, 04 Dec 2021 22:05:30 +0100</pubDate>
-      
-      <guid>https://jobinjosem.github.io/2021/12/oh-my-posh-powershell/</guid>
-      <description>In a previous post, I explained how to customize the bash prompt in WSL using kube-ps1. Turns out that kube-ps1 is a bit outdated and there are other cool tools available in the marketplace like oh-my-posh which is widely used among the community. In this post, I will explain how I personalized my PowerShell prompt using oh-my-posh.
-Below are the steps I followed to personalize my Powershell prompt.
-  Install oh-my-posh.</description>
-    </item>
-    
-    <item>
-      <title>Customize your Windows Terminal BASH in WSL2</title>
-      <link>https://jobinjosem.github.io/2021/08/wsl-customization/</link>
-      <pubDate>Sun, 01 Aug 2021 20:36:49 +0100</pubDate>
-      
-      <guid>https://jobinjosem.github.io/2021/08/wsl-customization/</guid>
-      <description>There are thousands of articles available on the internet about how you can customize your bash prompt in different ways. In this post, I will explain how to personalize your widows terminal bash prompt in WSL2 from a DevOps engineer viewpoint.
-Often we have to interact with Cloud resources in Azure and Kubernetes using different az cli and kubectl. How about showing the cluster you are connected to, the namespace you are in, the current Azure subscription, and the git repository you are working in and its current branch all in one place, awesome right?</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://jobinjosem.github.io/about/</link>
+      <title>Posts</title>
+      <link>https://docs.devopsnest.com/post/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jobinjosem.github.io/about/</guid>
-      <description>Hey, My name is Jobin Jose. I am currently working as a Devops engineer based out of Oslo, Norway; particularly focused on areas around Azure, Devops, IaC, Automation and Security.
-The statements I have posted on this site are mine alone and do not necessarily reflect the views of any organization. Should there be questions or concerns about the contents, feel free to reachout 📧 jobinjosem@hotmail.com</description>
+      <guid>https://docs.devopsnest.com/post/</guid>
+      <description></description>
     </item>
     
   </channel>
