@@ -27,15 +27,5 @@ Below are the steps I followed to personalize my Powershell prompt.
 Install oh-my-posh. Install-Module oh-my-posh -Scope CurrentUser -AllowPrerelease Install a font that supports Powerline symbols.</description>
     </item>
     
-    <item>
-      <title>Customize your Windows Terminal BASH in WSL2</title>
-      <link>https://docs.devopsnest.com/post/wsl-customization/</link>
-      <pubDate>Sun, 01 Aug 2021 20:36:49 +0100</pubDate>
-      
-      <guid>https://docs.devopsnest.com/post/wsl-customization/</guid>
-      <description>There are thousands of articles available on the internet about how you can customize your bash prompt in different ways. In this post, I will explain how to personalize your widows terminal bash prompt in WSL2 from a DevOps engineer viewpoint.
-Often we have to interact with Cloud resources in Azure and Kubernetes using different az cli and kubectl. How about showing the cluster you are connected to, the namespace you are in, the current Azure subscription, and the git repository you are working in and its current branch all in one place, awesome right?</description>
-    </item>
-    
   </channel>
 </rss>
