@@ -6,16 +6,7 @@
     <description>Recent content in wsl on Devopsnest Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Jan 2022 22:05:30 +0100</lastBuildDate><atom:link href="https://docs.devopsnest.com/categories/wsl/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Customize your BASH using oh-my-posh</title>
-      <link>https://docs.devopsnest.com/post/oh-my-posh-bash/</link>
-      <pubDate>Tue, 04 Jan 2022 22:05:30 +0100</pubDate>
-      
-      <guid>https://docs.devopsnest.com/post/oh-my-posh-bash/</guid>
-      <description>&lt;p&gt;In this post, I will explain how I tweaked my bash prompt in WSL using oh-my-posh.&lt;/p&gt;</description>
-    </item>
-    
+    <lastBuildDate>Sat, 04 Dec 2021 22:05:30 +0100</lastBuildDate><atom:link href="https://docs.devopsnest.com/categories/wsl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Customize your powershell using oh-my-posh</title>
       <link>https://docs.devopsnest.com/post/oh-my-posh-powershell/</link>
