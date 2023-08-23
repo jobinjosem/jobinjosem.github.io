@@ -1,50 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://docs.devopsnest.com/categories/</loc>
-    <lastmod>2023-08-04T10:27:40+02:00</lastmod>
-  </url><url>
-    <loc>https://docs.devopsnest.com/post/oh-my-posh-bash/</loc>
-    <lastmod>2023-08-04T10:27:40+02:00</lastmod>
-  </url><url>
-    <loc>https://docs.devopsnest.com/</loc>
-    <lastmod>2023-08-04T10:27:40+02:00</lastmod>
-  </url><url>
-    <loc>https://docs.devopsnest.com/tags/kubernetes/</loc>
-    <lastmod>2023-08-04T10:27:40+02:00</lastmod>
-  </url><url>
-    <loc>https://docs.devopsnest.com/tags/</loc>
-    <lastmod>2023-08-04T10:27:40+02:00</lastmod>
-  </url><url>
-    <loc>https://docs.devopsnest.com/tags/terminal/</loc>
-    <lastmod>2023-08-04T10:27:40+02:00</lastmod>
-  </url><url>
-    <loc>https://docs.devopsnest.com/tags/wsl/</loc>
-    <lastmod>2023-08-04T10:27:40+02:00</lastmod>
-  </url><url>
-    <loc>https://docs.devopsnest.com/categories/wsl1/</loc>
-    <lastmod>2023-08-04T10:27:40+02:00</lastmod>
-  </url><url>
-    <loc>https://docs.devopsnest.com/post/oh-my-posh-powershell/</loc>
-    <lastmod>2023-08-03T23:20:25+02:00</lastmod>
-  </url><url>
-    <loc>https://docs.devopsnest.com/categories/wsl/</loc>
-    <lastmod>2023-08-03T23:20:25+02:00</lastmod>
-  </url><url>
-    <loc>https://docs.devopsnest.com/post/wsl-customization/</loc>
-    <lastmod>2023-08-04T10:26:37+02:00</lastmod>
-  </url><url>
-    <loc>https://docs.devopsnest.com/categories/wslt/</loc>
-    <lastmod>2023-08-04T10:26:37+02:00</lastmod>
-  </url><url>
-    <loc>https://docs.devopsnest.com/readme/</loc>
-    <lastmod>2023-08-04T13:11:44+02:00</lastmod>
-  </url><url>
-    <loc>https://docs.devopsnest.com/tags/index/</loc>
-    <lastmod>2023-08-03T23:20:25+02:00</lastmod>
-  </url><url>
-    <loc>https://docs.devopsnest.com/post/</loc>
-    <lastmod>2023-08-03T23:20:25+02:00</lastmod>
-  </url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/posts/oh-my-posh-bash/</loc>
+<lastmod>2022-03-01T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/categories/</loc>
+<lastmod>2023-08-23T13:25:41+02:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/tags/</loc>
+<lastmod>2023-08-23T13:25:41+02:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/archives/</loc>
+<lastmod>2023-08-23T13:25:41+02:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/about/</loc>
+<lastmod>2023-08-23T13:25:41+02:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
 </urlset>
