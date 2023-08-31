@@ -2,4 +2,4 @@ User-agent: *
 
 Disallow: /norobots/
 
-Sitemap: https://docs.devopsnest.com/sitemap.xml
+Sitemap: https://www.devopsnest.com/sitemap.xml
